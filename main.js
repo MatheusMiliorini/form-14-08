@@ -70,36 +70,42 @@ function checarEntradas() {
 
 btnCadastrar.addEventListener("click",function(e) {
   e.preventDefault();
-  
-  var janelinha = window.open("","Dados de cadastro","width=300,height=300");
-  janelinha.document.write(`
-    <title>Dados do Cadastro</title>
-    <p>Nome:
-    ` + document.getElementById('nome').value + `
-    </p>
-    <p>Rua:
-    ` + document.getElementById('rua').value + `
-    </p>
-    <p>Número:
-    ` + document.getElementById('numero').value + `
-    </p>
-    <p>CEP:
-    ` + document.getElementById('cep').value + `
-    </p>
-    <p>Regiao:
-    ` + regiao.options[regiao.selectedIndex].value + `
-    </p>
-    <p>UF:
-    ` + uf.options[uf.selectedIndex].value + `
-    </p>
-    <p>Municipio:
-    ` + municipio.options[municipio.selectedIndex].value + `
-    </p>
-    <p>Nacionalidade:
-    ` + document.querySelector('input[name="nac"]:checked').value + `
-    </p>
-    <p>Nascimento:
-    ` + document.getElementById('nasc').value + `
-    </p>
-    `);
+
+  if (document.getElementById('nasc').value == "" || document.getElementById('cep').value == "") {
+    alert("Confirme Nascimento e CEP!");
+  } else {
+    var janelinha = window.open("","Dados de cadastro","width=300,height=300");
+    janelinha.document.write(`
+      <title>Dados do Cadastro</title>
+      <p>Nome:
+      ` + document.getElementById('nome').value + `
+      </p>
+      <p>Rua:
+      ` + document.getElementById('rua').value + `
+      </p>
+      <p>Número:
+      ` + document.getElementById('numero').value + `
+      </p>
+      <p>CEP:
+      ` + document.getElementById('cep').value + `
+      </p>
+      <p>Regiao:
+      ` + regiao.options[regiao.selectedIndex].value + `
+      </p>
+      <p>UF:
+      ` + uf.options[uf.selectedIndex].value + `
+      </p>
+      <p>Municipio:
+      ` + municipio.options[municipio.selectedIndex].value + `
+      </p>
+      <p>Nacionalidade:
+      ` + document.querySelector('input[name="nac"]:checked').value + `
+      </p>
+      <p>Nascimento:
+      ` + document.getElementById('nasc').value + `
+      </p>
+      `);
+  }
+
+
 });
