@@ -74,35 +74,46 @@ btnCadastrar.addEventListener("click",function(e) {
   if (document.getElementById('nasc').value == "" || document.getElementById('cep').value == "") {
     alert("Confirme Nascimento e CEP!");
   } else {
+    dados = {
+      nome: document.getElementById('nome').value,
+      rua: document.getElementById('rua').value,
+      numero: document.getElementById('numero').value,
+      cep: document.getElementById('cep').value,
+      regiao: regiao.options[regiao.selectedIndex].value,
+      uf: uf.options[uf.selectedIndex].value,
+      municipio: municipio.options[municipio.selectedIndex].value,
+      nac: document.querySelector('input[name="nac"]:checked').value,
+      nasc: document.getElementById('nasc').value
+    }
     var janelinha = window.open("","Dados de cadastro","width=300,height=300");
     janelinha.document.write(`
       <title>Dados do Cadastro</title>
       <p>Nome:
-      ` + document.getElementById('nome').value + `
+      ` + dados.nome + `
       </p>
       <p>Rua:
-      ` + document.getElementById('rua').value + `
+      ` + dados.rua + `
       </p>
       <p>Número:
-      ` + document.getElementById('numero').value + `
+      ` + dados.numero + `
       </p>
       <p>CEP:
-      ` + document.getElementById('cep').value + `
+      ` + dados.cep + `
       </p>
       <p>Regiao:
-      ` + regiao.options[regiao.selectedIndex].value + `
+      ` + dados.regiao + `
       </p>
       <p>UF:
-      ` + uf.options[uf.selectedIndex].value + `
+      ` + dados.uf + `
       </p>
       <p>Municipio:
-      ` + municipio.options[municipio.selectedIndex].value + `
+      ` + dados.municipio + `
       </p>
       <p>Nacionalidade:
-      ` + document.querySelector('input[name="nac"]:checked').value + `
+      ` + dados.nac + `
       </p>
       <p>Nascimento:
-      ` + document.getElementById('nasc').value + `
+      ` + dados.nasc + `
       </p>
       `);
   }
