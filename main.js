@@ -51,23 +51,6 @@ uf.addEventListener("change",function() {
   }
 });
 
-function checarEntradas() {
-  nome = document.getElementById('nome').value;
-  rua = document.getElementById('rua').value;
-  numero = document.getElementById('numero').value;
-  cep = document.getElementById('cep').value;
-  regiao = regiao.options[regiao.selectedIndex].value;
-  uf = uf.options[uf.selectedIndex].value;
-  municipio = municipio.options[municipio.selectedIndex].value;
-  nac = document.querySelector('input[name="nac"]:checked').value;
-  nasc = document.getElementById('nasc').value;
-
-  if (nome == "" || rua == "" || numero == "" || cep == "" || regiao == "" || uf == "" || municipio == "" || nac == "" || nasc == "")
-    return false
-  else
-    return true;
-}
-
 btnCadastrar.addEventListener("click",function(e) {
   e.preventDefault();
 
