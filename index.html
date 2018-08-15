@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="./main.css">
+  </head>
+  <body>
+    <form>
+      <div>
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" id="nome" value="" >
+      </div>
+
+      <div class="">
+        <label for="rua">Rua</label>
+        <input type="text" name="rua" id="rua" value="" >
+      </div>
+
+      <div class="">
+        <label for="numero">Numero</label>
+        <input type="number" name="numero" id="numero" value="" >
+      </div>
+
+      <div class="">
+        <label for="cep">CEP</label>
+        <input type="text" name="cep" id="cep" value="" >
+      </div>
+
+      <div class="">
+        <label for="regiao">Regiao</label>
+        <select id="regiao" class="" name="" >
+          <option value=""></option>
+          <option value="sul">Sul</option>
+          <option value="sudeste">Sudeste</option>
+        </select>
+      </div>
+
+      <div class="">
+        <label for="uf">UF</label>
+        <select id="uf" class="" name="" >
+          <option value=""></option>
+        </select>
+      </div>
+
+      <div class="">
+        <label for="municipio">Municipio</label>
+        <select id="municipio" class="" name="">
+          <option value=""></option>
+        </select>
+      </div>
+
+      <div class="">
+        <input id="nac" checked type="radio" name="nac" value="brasileiro">Brasileiro <br>
+        <input id="nac" type="radio" name="nac" value="estrangeiro">Estrangeiro
+      </div>
+
+      <div class="">
+        <label for="nasc">Nascimento</label>
+        <input type="date" id="nasc" name="" value="" >
+      </div>
+
+      <button id="cadastrar" type="submit" name="button">Cadastrar</button>
+    </form>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
